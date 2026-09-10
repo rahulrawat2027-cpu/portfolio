@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahul Rawat</title>
+<meta name="description" content="Rahul Rawat. Growth, revenue operations, and founder's office.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --paper:#FAF6ED;
+    --paper-soft:#F1EADA;
+    --ink:#242019;
+    --ink-70: rgba(36,32,25,0.7);
+    --secondary:#6F6656;
+    --rule:#E1D8C3;
+    --accent:#516B34;
+    --accent-soft:#E6EBDA;
+    --gold:#C08A34;
+    --white:#FFFDF8;
+    --max:1080px;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  img{max-width:100%; display:block;}
+
+  a{color:inherit;}
+
+  h1,h2,h3{
+    font-family:var(--serif);
+    font-weight:600;
+    line-height:1.12;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+
+  .num{ font-variant-numeric: tabular-nums; }
+
+  p{margin:0 0 1em 0;}
+  p:last-child{margin-bottom:0;}
+
+  :focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  @media (max-width:600px){
+    .wrap{padding:0 20px;}
+    body{font-size:16px;}
+  }
+
+  .section{ padding:96px 0; }
+  .section.tight{ padding:72px 0; }
+  @media (max-width:700px){
+    .section{ padding:64px 0; }
+    .section.tight{ padding:48px 0; }
+  }
+
+  .section-soft{ background:var(--paper-soft); }
+  .section-ink{ background:var(--ink); color:var(--paper); }
+
+  .kicker{
+    font-family:var(--sans);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.02em;
+    color:var(--accent);
+    margin:0 0 14px 0;
+  }
+  .section-ink .kicker{ color:var(--gold); }
+
+  .section-head{
+    max-width:640px;
+    margin-bottom:56px;
+  }
+  .section-head h2{
+    font-size:clamp(28px,4vw,38px);
+  }
+  .section-head .dek{
+    margin-top:14px;
+    color:var(--secondary);
+    font-size:17px;
+    max-width:56ch;
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(250,246,237,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 32px;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+  @media (max-width:600px){ .nav-inner{ padding:0 20px; } }
+  .nav-name{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:19px;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .nav-links{
+    display:flex;
+    gap:26px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    overflow-x:auto;
+  }
+  .nav-links a{
+    font-size:14px;
+    text-decoration:none;
+    color:var(--secondary);
+    white-space:nowrap;
+    padding:4px 2px;
+    border-bottom:2px solid transparent;
+    transition:color 0.15s ease, border-color 0.15s ease;
+  }
+  .nav-links a:hover{ color:var(--ink); border-color:var(--accent); }
+  @media (max-width:640px){
+    .nav-links{ display:none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:88px 0 64px 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-inner{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 32px;
+    position:relative;
+  }
+  @media (max-width:600px){ .hero-inner{ padding:0 20px; } }
+
+  .hero-eyebrow{
+    font-size:14px;
+    color:var(--secondary);
+    margin-bottom:18px;
+  }
+
+  .hero h1{
+    font-size:clamp(40px,7vw,66px);
+    max-width:14ch;
+  }
+
+  .hero-pitch{
+    margin-top:22px;
+    font-size:clamp(18px,2.3vw,21px);
+    color:var(--ink-70);
+    max-width:52ch;
+  }
+
+  .hero-sub{
+    margin-top:14px;
+    font-size:16px;
+    color:var(--secondary);
+    max-width:54ch;
+  }
+
+  .hero-actions{
+    margin-top:36px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    border-radius:4px;
+    font-family:var(--sans);
+    font-size:14.5px;
+    font-weight:600;
+    text-decoration:none;
+    border:1px solid var(--ink);
+    transition:transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  }
+  .btn-primary{ background:var(--ink); color:var(--paper); }
+  .btn-primary:hover{ background:var(--accent); border-color:var(--accent); transform:translateY(-1px); }
+  .btn-ghost{ background:transparent; color:var(--ink); }
+  .btn-ghost:hover{ background:var(--ink); color:var(--paper); transform:translateY(-1px); }
+
+  .hero-line{
+    margin-top:72px;
+    height:1px;
+    background:var(--rule);
+  }
+
+  .facts-strip{
+    margin-top:44px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+  }
+  @media (max-width:760px){
+    .facts-strip{ grid-template-columns:repeat(2,1fr); row-gap:32px; }
+  }
+  .fact .num{
+    font-family:var(--serif);
+    font-size:clamp(26px,3.4vw,34px);
+    font-weight:600;
+    color:var(--accent);
+  }
+  .fact .label{
+    margin-top:6px;
+    font-size:13.5px;
+    color:var(--secondary);
+    max-width:20ch;
+  }
+
+  /* hero motif: hand drawn ascending line */
+  .hero-motif{
+    position:absolute;
+    right:-40px;
+    top:20px;
+    width:340px;
+    opacity:0.9;
+    pointer-events:none;
+  }
+  @media (max-width:900px){ .hero-motif{ display:none; } }
+  .motif-path{
+    stroke-dasharray:600;
+    stroke-dashoffset:600;
+    animation:draw 1.6s ease forwards 0.3s;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .motif-path{ stroke-dashoffset:0; animation:none; }
+  }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:44px;
+  }
+  @media (max-width:760px){
+    .about-grid{ grid-template-columns:1fr; gap:40px; }
+  }
+  .about-block .tag{
+    font-family:var(--sans);
+    font-size:13px;
+    font-weight:600;
+    color:var(--gold);
+    margin-bottom:12px;
+  }
+  .about-block h3{
+    font-size:21px;
+    margin-bottom:12px;
+  }
+  .about-block p{
+    color:var(--ink-70);
+    font-size:15.5px;
+  }
+
+  /* ---------- SELECTED WORK ---------- */
+  .work-group{ margin-bottom:52px; }
+  .work-group:last-child{ margin-bottom:0; }
+  .work-group-title{
+    font-family:var(--sans);
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--secondary);
+    padding-bottom:10px;
+    margin-bottom:20px;
+    border-bottom:1px solid var(--rule);
+  }
+
+  details.project{
+    border-bottom:1px solid var(--rule);
+  }
+  details.project summary{
+    list-style:none;
+    cursor:pointer;
+    padding:22px 0;
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:20px;
+  }
+  details.project summary::-webkit-details-marker{ display:none; }
+  .proj-title-wrap h3{
+    font-size:20px;
+    font-weight:600;
+  }
+  .proj-oneline{
+    margin-top:6px;
+    color:var(--secondary);
+    font-size:15px;
+  }
+  .proj-toggle{
+    flex:none;
+    width:26px;
+    height:26px;
+    border:1px solid var(--ink);
+    border-radius:50%;
+    position:relative;
+  }
+  .proj-toggle::before,
+  .proj-toggle::after{
+    content:"";
+    position:absolute;
+    background:var(--ink);
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+  }
+  .proj-toggle::before{ width:10px; height:1.5px; }
+  .proj-toggle::after{ width:1.5px; height:10px; transition:transform 0.2s ease; }
+  details[open] .proj-toggle::after{ transform:translate(-50%,-50%) rotate(90deg) scaleY(0); }
+
+  .proj-body{
+    padding:0 0 30px 0;
+    display:grid;
+    gap:18px;
+    max-width:74ch;
+  }
+  .proj-field .flabel{
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--gold);
+    margin-bottom:5px;
+  }
+  .proj-field p{ color:var(--ink-70); font-size:15.5px; }
+  .proj-artefacts{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:4px;
+  }
+  .proj-artefacts a{
+    font-size:14px;
+    font-weight:600;
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px solid var(--accent);
+    padding-bottom:1px;
+  }
+  .proj-artefacts a:hover{ color:var(--ink); border-color:var(--ink); }
+
+  /* ---------- EXPERIENCE ---------- */
+  .impact-strip{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:24px;
+    padding-bottom:64px;
+    margin-bottom:64px;
+    border-bottom:1px solid rgba(250,246,237,0.18);
+  }
+  @media (max-width:900px){
+    .impact-strip{ grid-template-columns:repeat(2,1fr); row-gap:36px; }
+  }
+  .impact-cell .num{
+    font-family:var(--serif);
+    font-size:clamp(24px,3vw,32px);
+    font-weight:600;
+    color:var(--gold);
+  }
+  .impact-cell .label{
+    margin-top:6px;
+    font-size:13px;
+    color:rgba(250,246,237,0.65);
+    max-width:18ch;
+  }
+
+  .timeline{
+    position:relative;
+    padding-left:28px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:5px; top:6px; bottom:6px;
+    width:1px;
+    background:rgba(250,246,237,0.25);
+  }
+  .role{
+    position:relative;
+    padding-bottom:40px;
+  }
+  .role:last-child{ padding-bottom:0; }
+  .role::before{
+    content:"";
+    position:absolute;
+    left:-28px; top:6px;
+    width:11px; height:11px;
+    border-radius:50%;
+    background:var(--gold);
+    border:2px solid var(--ink);
+  }
+  .role-head{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:10px;
+    justify-content:space-between;
+  }
+  .role-title{ font-family:var(--serif); font-size:19px; font-weight:600; }
+  .role-org{ color:rgba(250,246,237,0.75); font-size:14.5px; margin-top:3px; }
+  .role-dates{ font-size:13.5px; color:rgba(250,246,237,0.55); white-space:nowrap; }
+  .role-notes{
+    margin-top:12px;
+    color:rgba(250,246,237,0.75);
+    font-size:15px;
+    max-width:64ch;
+  }
+
+  .skills-line{
+    margin-top:56px;
+    padding-top:32px;
+    border-top:1px solid rgba(250,246,237,0.18);
+  }
+  .skills-line .flabel{
+    font-size:12.5px;
+    font-weight:600;
+    color:var(--gold);
+    margin-bottom:12px;
+  }
+  .skills-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+  }
+  .skills-tags span{
+    font-size:13px;
+    padding:6px 12px;
+    border:1px solid rgba(250,246,237,0.3);
+    border-radius:20px;
+    color:rgba(250,246,237,0.85);
+  }
+
+  /* ---------- EDUCATION ---------- */
+  .edu-item{
+    padding:26px 0;
+    border-bottom:1px solid var(--rule);
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:16px;
+    align-items:baseline;
+  }
+  .edu-item:first-child{ padding-top:0; }
+  .edu-item:last-child{ border-bottom:none; }
+  .edu-item h3{ font-size:19px; }
+  .edu-item .deg{ margin-top:5px; color:var(--secondary); font-size:15px; }
+  .edu-item .yrs{ font-size:14px; color:var(--secondary); white-space:nowrap; }
+
+  /* ---------- ACHIEVEMENTS ---------- */
+  .ach-list{
+    display:grid;
+    gap:0;
+  }
+  .ach-item{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:18px;
+    padding:20px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  .ach-item:last-child{ border-bottom:none; }
+  .ach-mark{
+    font-family:var(--serif);
+    font-size:16px;
+    color:var(--gold);
+    padding-top:2px;
+  }
+  .ach-item p{ color:var(--ink-70); font-size:15.5px; }
+
+  /* ---------- WRITING ---------- */
+  .writing-card{
+    background:var(--white);
+    border:1px solid var(--rule);
+    border-radius:6px;
+    padding:44px;
+  }
+  @media (max-width:640px){ .writing-card{ padding:28px 22px; } }
+  .writing-card h3{
+    font-size:26px;
+    max-width:20ch;
+  }
+  .writing-meta{
+    margin-top:10px;
+    font-size:13.5px;
+    color:var(--secondary);
+  }
+
+  .compare-viz{
+    margin:30px 0 34px 0;
+    display:flex;
+    gap:36px;
+    align-items:flex-end;
+  }
+  .bar-col{ text-align:left; }
+  .bar-track{
+    width:64px;
+    height:150px;
+    background:var(--paper-soft);
+    border-radius:3px;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+  }
+  .bar-fill{
+    width:100%;
+    border-radius:3px 3px 0 0;
+  }
+  .bar-fill.target{ height:68%; background:var(--rule); }
+  .bar-fill.actual{ height:90%; background:var(--accent); }
+  .bar-num{ margin-top:10px; font-family:var(--serif); font-weight:600; font-size:18px; }
+  .bar-label{ font-size:12.5px; color:var(--secondary); margin-top:2px; }
+
+  .writing-card p{
+    color:var(--ink-70);
+    font-size:16.5px;
+    max-width:70ch;
+  }
+  .writing-card p + p{ margin-top:16px; }
+
+  /* ---------- BEYOND WORK ---------- */
+  .hobby-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    border-radius:6px;
+    overflow:hidden;
+  }
+  @media (max-width:700px){
+    .hobby-grid{ grid-template-columns:repeat(2,1fr); }
+  }
+  @media (max-width:460px){
+    .hobby-grid{ grid-template-columns:1fr; }
+  }
+  .hobby{
+    background:var(--paper);
+    padding:32px 24px;
+  }
+  .hobby svg{ width:30px; height:30px; stroke:var(--accent); }
+  .hobby h3{
+    margin-top:16px;
+    font-size:16.5px;
+    font-weight:600;
+  }
+  .hobby p{
+    margin-top:6px;
+    font-size:14px;
+    color:var(--secondary);
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:56px;
+    align-items:start;
+  }
+  @media (max-width:760px){
+    .contact-grid{ grid-template-columns:1fr; gap:40px; }
+  }
+  .contact-lead h2{
+    font-size:clamp(30px,4.4vw,42px);
+    max-width:14ch;
+  }
+  .contact-lead p{
+    margin-top:16px;
+    color:var(--secondary);
+    font-size:16px;
+    max-width:46ch;
+  }
+  .contact-actions{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .contact-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:16px 20px;
+    border:1px solid var(--rule);
+    border-radius:5px;
+    text-decoration:none;
+    color:var(--ink);
+    font-size:15px;
+    transition:border-color 0.15s ease, background 0.15s ease;
+  }
+  .contact-row:hover{ border-color:var(--accent); background:var(--paper-soft); }
+  .contact-row .cr-label{ font-weight:600; }
+  .contact-row .cr-arrow{ color:var(--secondary); font-size:14px; }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:36px 0;
+    border-top:1px solid var(--rule);
+  }
+  .footer-inner{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:12px;
+    font-size:13.5px;
+    color:var(--secondary);
+  }
+
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Rahul Rawat</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#beyond">Beyond work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <svg class="hero-motif" viewBox="0 0 300 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path class="motif-path" d="M6 140 C 60 138, 70 110, 100 108 S 150 60, 175 58 S 220 20, 290 12" stroke="#516B34" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="290" cy="12" r="4" fill="#C08A34"/>
+      </svg>
+
+      <p class="hero-eyebrow">Gurugram &amp; New Delhi</p>
+      <h1>Rahul Rawat</h1>
+      <p class="hero-pitch">Eighteen months scaling revenue operations at a YC backed startup. Now building my own brand and aiming for founder's office, program management and B2B sales roles.</p>
+      <p class="hero-sub">PGP student in Technology &amp; Business Management at Masters' Union, Gurugram, and founder at TNGNT Clothing.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">View work</a>
+        <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/rahulrawat022" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+
+      <div class="hero-line"></div>
+
+      <div class="facts-strip">
+        <div class="fact">
+          <div class="num">₹50L+</div>
+          <div class="label">Monthly revenue scaled at Exly</div>
+        </div>
+        <div class="fact">
+          <div class="num">18 mo</div>
+          <div class="label">To senior manager, from individual contributor</div>
+        </div>
+        <div class="fact">
+          <div class="num">5,000+</div>
+          <div class="label">Leads engaged across sales and retention</div>
+        </div>
+        <div class="fact">
+          <div class="num">10,000+</div>
+          <div class="label">Member community built from scratch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">About</p>
+        <h2>Before, now, next</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-block">
+          <p class="tag">Before</p>
+          <h3>Learning outside the classroom</h3>
+          <p>Some of my biggest lessons in leadership and problem solving came from activities, not textbooks. In college, I found social entrepreneurship through Enactus and D-Street DSC, and around the same time, I helped build a football fan community from scratch. Both taught me the same thing: you rarely need a perfect plan to start, you need to take the first step and figure out the rest with people who care as much as you do.</p>
+        </div>
+        <div class="about-block">
+          <p class="tag">Now</p>
+          <h3>Building on both sides</h3>
+          <p>I spent eighteen months in revenue operations at Exly, moving from individual contributor to senior manager leading a fifteen person team. In parallel, I'm doing the PGP in Technology &amp; Business Management at Masters' Union and founded TNGNT Clothing, a D2C apparel brand for sports communities. Masters' Union stood out because it treats real projects and industry exposure as the curriculum, not an add on to it.</p>
+        </div>
+        <div class="about-block">
+          <p class="tag">Next</p>
+          <h3>Strategy, and something of my own</h3>
+          <p>I want to keep taking on ambiguous problems, get sharper at strategy and how businesses actually work, and eventually build something of my own at a bigger scale than TNGNT. In the near term, that means founder's office, program management or B2B sales roles, where the job is to walk into unclear situations and find the one thing worth fixing first.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="section section-soft" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Selected work</p>
+        <h2>Seven things I'd want to be asked about</h2>
+        <p class="dek">Grouped into paid work, things I built from nothing, and work aimed outward at other people's problems.</p>
+      </div>
+
+      <div class="work-group">
+        <p class="work-group-title">Professional</p>
+
+        <details class="project">
+          <summary>
+            <div class="proj-title-wrap">
+              <h3>Revenue operations at scale, Exly</h3>
+              <p class="proj-oneline">Diagnosing and closing revenue gaps for coach and creator businesses on a YC backed platform.</p>
+            </div>
+            <span class="proj-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="proj-body">
+            <div class="proj-field">
+              <p class="flabel">Problem</p>
+              <p>Coach and creator accounts on the platform were leaving revenue on the table because of unoptimized funnels, manual operations and slow retention response.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What I did</p>
+              <p>Diagnosed revenue gaps across accounts, restructured webinars, cross-sells and retention campaigns, optimized website and payment operations, and automated lead nurturing using AiSensy, WATI and CRM systems. Led a fifteen member cross-functional team through the execution.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What it showed</p>
+              <p>Scaled multiple accounts past ₹50L in monthly revenue, optimized ₹10L to ₹30L in monthly marketing spend, and generated over ₹1.2Cr in quarterly profit, including a quarter where the team beat a ₹90L target by roughly a third. Automation cut manual operations by 70 percent and engagement reached over 5,000 leads.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">My contribution</p>
+              <p>I owned the diagnosis and the operating plan, and was promoted to senior manager within eighteen months on the back of it, while the execution was carried out with my team.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="project">
+          <summary>
+            <div class="proj-title-wrap">
+              <h3>Category and partner growth, Urban Company</h3>
+              <p class="proj-oneline">Growing and stabilizing a partner network across Punjab and Uttar Pradesh.</p>
+            </div>
+            <span class="proj-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="proj-body">
+            <div class="proj-field">
+              <p class="flabel">Problem</p>
+              <p>Partner supply was thin and unevenly spread across the region, and query resolution was slow enough to hurt partner experience.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What I did</p>
+              <p>Led onboarding and reactivation drives using demographic and market analysis, restructured city wise workforce allocation, and strengthened escalation channels to resolve field level bottlenecks faster.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What it showed</p>
+              <p>Grew the partner network past 2,000, onboarded over 200 new professionals and reactivated over 100 more, cut query resolution time by 30 percent, and reduced lost requests by 10 percent, without adding headcount.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="work-group">
+        <p class="work-group-title">Founding &amp; building</p>
+
+        <details class="project">
+          <summary>
+            <div class="proj-title-wrap">
+              <h3>TNGNT Clothing</h3>
+              <p class="proj-oneline">A D2C apparel brand for sports communities, built with zero marketing spend.</p>
+            </div>
+            <span class="proj-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="proj-body">
+            <div class="proj-field">
+              <p class="flabel">Problem</p>
+              <p>Sports communities didn't have apparel built specifically around them, and I wanted to test whether a bootstrapped D2C brand could work without paid marketing.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What I did</p>
+              <p>Ran competitor analysis and customer surveys inside sports communities, priced the product at ₹999 against ₹560 in production, shipping and packaging costs, and drove demand through college team partnerships, dropshipping channels and organic Instagram.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What it showed</p>
+              <p>A margin of over ₹430 per unit, more than ₹60K in revenue with zero marketing spend, and a target of ₹1L or more by the end of the current quarter.</p>
+            </div>
+            <div class="proj-artefacts">
+              <a data-key="tngntWebsite" href="#" target="_blank" rel="noopener">Visit website</a>
+              <a data-key="tngntInstagram" href="#" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+        </details>
+
+        <details class="project">
+          <summary>
+            <div class="proj-title-wrap">
+              <h3>D-Street DSC, founding president</h3>
+              <p class="proj-oneline">A stock market community built from scratch on campus.</p>
+            </div>
+            <span class="proj-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="proj-body">
+            <div class="proj-field">
+              <p class="flabel">Problem</p>
+              <p>Financial literacy, and especially female participation in investing, had little presence on campus.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What I did</p>
+              <p>Founded and built the community from zero members, organizing events and education focused on financial literacy and investing.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What it showed</p>
+              <p>Grew to over 120 members, and the community organized a fundraising drive that raised over ₹2.5L for underprivileged communities in 2023.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="project">
+          <summary>
+            <div class="proj-title-wrap">
+              <h3>Dynamos Ultras, founding core member</h3>
+              <p class="proj-oneline">A football fan club, grown from nothing between 2015 and 2019.</p>
+            </div>
+            <span class="proj-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="proj-body">
+            <div class="proj-field">
+              <p class="flabel">Problem</p>
+              <p>Football culture in Delhi NCR had faded, and fans had no organized community to rally around.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What I did</p>
+              <p>Helped build the fan club from the ground up as a founding core member, organizing around match days and shared identity.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What it showed</p>
+              <p>Grew the club to over 10,000 members and helped revive football culture in the city. The experience taught me that you don't need a perfect plan to start something, only a first step and a few people as invested as you are.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="work-group">
+        <p class="work-group-title">Social impact</p>
+
+        <details class="project">
+          <summary>
+            <div class="proj-title-wrap">
+              <h3>Enactus DSC, business development executive</h3>
+              <p class="proj-oneline">Four live social entrepreneurship ventures, taken to a global final.</p>
+            </div>
+            <span class="proj-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="proj-body">
+            <div class="proj-field">
+              <p class="flabel">Problem</p>
+              <p>Marginalized communities needed sustainable livelihoods, not one time aid, and that meant ventures with a real business model.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What I did</p>
+              <p>Led an eighty person team across four live social entrepreneurship projects, including Race to Rethink Plastic, and contributed to fundraising for COVID-19 relief alongside the venture work.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What it showed</p>
+              <p>Finished top 4 globally in Race to Rethink Plastic at the Enactus World Cup 2022, and helped raise over ₹5L in COVID-19 relief funds through campaigns and competitions.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="project">
+          <summary>
+            <div class="proj-title-wrap">
+              <h3>Girl Up, UN Foundation, editor</h3>
+              <p class="proj-oneline">Content and direct action on gender equality and menstrual health.</p>
+            </div>
+            <span class="proj-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="proj-body">
+            <div class="proj-field">
+              <p class="flabel">Problem</p>
+              <p>Gender equality and menstrual health awareness needed both visibility and direct, practical action.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What I did</p>
+              <p>Curated and optimized social media content to drive awareness, and organized donation drives across Delhi NCR.</p>
+            </div>
+            <div class="proj-field">
+              <p class="flabel">What it showed</p>
+              <p>Over 1,000 sanitary pads donated across marginalized communities, supporting menstrual hygiene and health awareness directly, not just online.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-ink" id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Experience</p>
+        <h2 style="color:var(--paper);">Where the numbers came from</h2>
+      </div>
+
+      <div class="impact-strip">
+        <div class="impact-cell">
+          <div class="num">₹1.2Cr+</div>
+          <div class="label">Quarterly profit generated</div>
+        </div>
+        <div class="impact-cell">
+          <div class="num">2,000+</div>
+          <div class="label">Partner network scaled</div>
+        </div>
+        <div class="impact-cell">
+          <div class="num">70%</div>
+          <div class="label">Reduction in manual operations</div>
+        </div>
+        <div class="impact-cell">
+          <div class="num">30%</div>
+          <div class="label">Faster query resolution</div>
+        </div>
+        <div class="impact-cell">
+          <div class="num">15</div>
+          <div class="label">Person team led at Exly</div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="role">
+          <div class="role-head">
+            <div>
+              <div class="role-title">Senior Manager, Revenue Operations</div>
+              <div class="role-org">Exly (YC W19), Gurugram</div>
+            </div>
+            <div class="role-dates">Nov 2024 - Jun 2026</div>
+          </div>
+          <p class="role-notes">Scaled coach and creator accounts, led a fifteen person cross-functional team, and automated sales, retention and community workflows across 5,000+ leads.</p>
+        </div>
+        <div class="role">
+          <div class="role-head">
+            <div>
+              <div class="role-title">Founder</div>
+              <div class="role-org">TNGNT Clothing, New Delhi</div>
+            </div>
+            <div class="role-dates">Mar 2026 - Present</div>
+          </div>
+          <p class="role-notes">Built a D2C apparel brand for sports communities from product to distribution, with zero paid marketing spend.</p>
+        </div>
+        <div class="role">
+          <div class="role-head">
+            <div>
+              <div class="role-title">Business Development Associate</div>
+              <div class="role-org">Urban Company, Remote</div>
+            </div>
+            <div class="role-dates">Feb 2024 - Oct 2024</div>
+          </div>
+          <p class="role-notes">Scaled and stabilized a 2,000+ partner network across Punjab and Uttar Pradesh, improving service delivery and partner experience.</p>
+        </div>
+        <div class="role">
+          <div class="role-head">
+            <div>
+              <div class="role-title">Business Development Intern</div>
+              <div class="role-org">Urban Company, Remote</div>
+            </div>
+            <div class="role-dates">Aug 2021 - Nov 2021</div>
+          </div>
+          <p class="role-notes">Generated 2,000+ qualified leads and onboarded 150+ partners, then was promoted to lead a team of five interns after being recognized as best intern within two months.</p>
+        </div>
+      </div>
+
+      <div class="skills-line">
+        <p class="flabel">Skills &amp; tools</p>
+        <div class="skills-tags">
+          <span>Revenue &amp; GMV growth</span>
+          <span>Funnel analytics</span>
+          <span>Process automation</span>
+          <span>Stakeholder management</span>
+          <span>CRM systems</span>
+          <span>SQL</span>
+          <span>Google Workspace</span>
+          <span>Canva</span>
+          <span>WhatsApp Business API</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section tight" id="education">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Education</p>
+        <h2>Formal, and hands on</h2>
+      </div>
+      <div>
+        <div class="edu-item">
+          <div>
+            <h3>Masters' Union, Gurugram</h3>
+            <p class="deg">PGP in Technology &amp; Business Management</p>
+          </div>
+          <div class="yrs">2026 - Present</div>
+        </div>
+        <div class="edu-item">
+          <div>
+            <h3>Dyal Singh Evening College, University of Delhi</h3>
+            <p class="deg">Bachelor of Arts, Economics and Operational Research. CGPA 7.4/10, first division.</p>
+          </div>
+          <div class="yrs">2020 - 2023</div>
+        </div>
+        <div class="edu-item">
+          <div>
+            <h3>Bharatiya Vidya Bhavan's Mehta Vidyalaya, New Delhi</h3>
+            <p class="deg">CBSE Class XII, 86 percent, PCM. CBSE Class X, 86 percent.</p>
+          </div>
+          <div class="yrs">2018 - 2020</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section tight section-soft" id="achievements">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Achievements</p>
+        <h2>A few that say something about how I work</h2>
+      </div>
+      <div class="ach-list">
+        <div class="ach-item">
+          <div class="ach-mark">01</div>
+          <p>Promoted to senior manager at Exly within eighteen months, after leading a fifteen member cross-functional team through a revenue turnaround.</p>
+        </div>
+        <div class="ach-item">
+          <div class="ach-mark">02</div>
+          <p>Finished top 4 globally in Race to Rethink Plastic at the Enactus World Cup 2022, leading an eighty person team across four live ventures.</p>
+        </div>
+        <div class="ach-item">
+          <div class="ach-mark">03</div>
+          <p>Built Dynamos Ultras into a 10,000 plus member football fan community between 2015 and 2019, helping revive football culture in Delhi NCR.</p>
+        </div>
+        <div class="ach-item">
+          <div class="ach-mark">04</div>
+          <p>Recognized as Delhi's Best Football Fan by Reliance and ISL, and felicitated live on Star Sports in 2018.</p>
+        </div>
+        <div class="ach-item">
+          <div class="ach-mark">05</div>
+          <p>Secured 3rd position leading the school football team at the Zonal Football Tournament, Central Zone, New Delhi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section class="section" id="writing">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Writing</p>
+        <h2>One thing I actually think about</h2>
+      </div>
+      <div class="writing-card">
+        <h3>Beating a stretch target while learning to lead</h3>
+        <p class="writing-meta">A short account of Q1 2025 at Exly.</p>
+
+        <div class="compare-viz" role="img" aria-label="Target of 90 lakh rupees versus actual result of 1.2 crore rupees, a 33 percent overachievement">
+          <div class="bar-col">
+            <div class="bar-track"><div class="bar-fill target"></div></div>
+            <div class="bar-num">₹90L</div>
+            <div class="bar-label">Target</div>
+          </div>
+          <div class="bar-col">
+            <div class="bar-track"><div class="bar-fill actual"></div></div>
+            <div class="bar-num">₹1.2Cr</div>
+            <div class="bar-label">Actual, +33%</div>
+          </div>
+        </div>
+
+        <p>In Q1 2025, my team was given a target of ₹90 lakh in profit for the quarter. I had also just been promoted into a managerial role for the first time. So I was responsible for delivering the number and for overseeing a team of twelve or more people, without a clear roadmap for how to get there.</p>
+
+        <p>My immediate priority was to understand what was holding the team back. Since I had recently been in a junior role myself, I had a good sense of the operational challenges the team was facing, and I wanted to use that to make the team more efficient while keeping everyone motivated toward a shared goal.</p>
+
+        <p>I started by speaking with the team individually and collectively about the problems they were facing across our processes. We found several small inefficiencies and repetitive manual tasks eating into the team's time. I worked with the team to simplify these processes and automate the most repetitive ones. The idea was simple. If we saved collective hours on operational work, we could redirect that time toward activities that drove sales and revenue directly.</p>
+
+        <p>It became a mini revamp of processes that had been followed for a long time. Alongside the process changes, I focused on keeping the team motivated. Since it was my first managerial role too, I tried to lead from the front, stay involved in execution, and build a sense that we were figuring this out together rather than simply chasing a number.</p>
+
+        <p>We ultimately delivered ₹1.2 crore in profit against a ₹90 lakh target, beating it by roughly a third. The bigger takeaway for me wasn't the number itself. It was learning how to lead a team through an ambiguous situation, find problems from the ground up, and turn small process improvements into business impact that mattered. It was also my first real lesson that a manager's job isn't to do the work better yourself. It's to build an environment where the whole team can perform better.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEYOND WORK -->
+  <section class="section section-soft" id="beyond">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Beyond work</p>
+        <h2>What I do when I'm not working</h2>
+        <p class="dek">The football community wasn't a one off. Most of what I care about outside work still involves people, movement, or both.</p>
+      </div>
+
+      <div class="hobby-grid">
+        <div class="hobby">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5l3 2.2-1.1 3.6h-3.8L9 9.7z"/><path d="M12 3v4.5M12 20.5V17M4 9.5l3.1 1M20 9.5l-3.1 1M4.6 16.5l3.5-2.2M19.4 16.5l-3.5-2.2"/></svg>
+          <h3>Football, and Barca</h3>
+          <p>Been a fan for years, helped build a 10,000 plus member fan community, and I still don't miss a matchday.</p>
+        </div>
+        <div class="hobby">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18"/><path d="M4 19l5-9 3 4 2-3 6 8"/><path d="M9 10l-1.5 3M18 13l1.5 2"/></svg>
+          <h3>Trekking &amp; mountains</h3>
+          <p>Led five plus multi-day Himalayan expeditions as a trip captain, and I still look for reasons to get back up there.</p>
+        </div>
+        <div class="hobby">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="12" rx="1.5"/><circle cx="7" cy="12" r="1.1" fill="currentColor" stroke="none"/><circle cx="17" cy="9" r="1.1" fill="currentColor" stroke="none"/><circle cx="17" cy="15" r="1.1" fill="currentColor" stroke="none"/></svg>
+          <h3>Snooker</h3>
+          <p>Slow, precise, and the closest thing I have to a reset button after a long week.</p>
+        </div>
+        <div class="hobby">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16l1.5-5A2 2 0 0 1 6.4 9.5h11.2a2 2 0 0 1 1.9 1.5L21 16"/><path d="M3 16h18v2.5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V17H6v1.5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><circle cx="7.5" cy="16" r="1"/><circle cx="16.5" cy="16" r="1"/></svg>
+          <h3>Long drives</h3>
+          <p>No destination required. Some of my best thinking happens on the road.</p>
+        </div>
+        <div class="hobby">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v7a3 3 0 0 0 3 3v8"/><path d="M6 3v7M9 3v7"/><path d="M17 3c-2 1-2 5-2 7a2 2 0 0 0 2 2v9"/></svg>
+          <h3>Food</h3>
+          <p>Always up for trying somewhere new, and always willing to argue about where has the best food.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-lead">
+          <p class="kicker">Contact</p>
+          <h2>Let's talk about the role.</h2>
+          <p>Open to conversations on founder's office, program management, revenue operations and B2B sales roles. The fastest way to reach me is email.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-row" href="mailto:rahul.rawat2027@mastersunion.org">
+            <span class="cr-label">Email</span>
+            <span class="cr-arrow">rahul.rawat2027@mastersunion.org</span>
+          </a>
+          <a class="contact-row" href="https://www.linkedin.com/in/rahulrawat022" target="_blank" rel="noopener">
+            <span class="cr-label">LinkedIn</span>
+            <span class="cr-arrow">View profile</span>
+          </a>
+          <a class="contact-row" href="resume.pdf" target="_blank" rel="noopener">
+            <span class="cr-label">View resume</span>
+            <span class="cr-arrow">Open PDF</span>
+          </a>
+          <a class="contact-row" href="resume.pdf" download>
+            <span class="cr-label">Download resume</span>
+            <span class="cr-arrow">Save PDF</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>Rahul Rawat, 2026</span>
+    <span>Built for AI in Business, Masters' Union</span>
+  </div>
+</footer>
+
+<script>
+  // Config: any optional field left empty removes its own block, so the
+  // site never shows a broken link.
+  const config = {
+    tngntWebsite: "https://www.tngntclothing.in/",
+    tngntInstagram: "https://www.instagram.com/tngnt.in?igsh=MTkwMjl4OG5rYXY1aA%3D%3D"
+  };
+
+  document.querySelectorAll('[data-key]').forEach((el) => {
+    const key = el.getAttribute('data-key');
+    const value = config[key];
+    if (!value) {
+      el.remove();
+    } else {
+      el.setAttribute('href', value);
+    }
+  });
+</script>
+
+</body>
+</html>
