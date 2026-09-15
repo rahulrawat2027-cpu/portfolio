@@ -713,29 +713,33 @@ export default function App() {
               <h2 style={{ color: 'var(--paper)' }}>Where the numbers came from</h2>
             </div>
 
-            <div className="impact-strip" data-reveal="true">
+            <div className="exp-impact" data-reveal="true">
               {IMPACT.map((cell) => (
-                <div className="impact-cell" key={cell.label}>
+                <div className="exp-impact-cell" key={cell.label}>
                   <div className="num" data-count={cell.count} data-decimals={cell.decimals} data-prefix={cell.prefix} data-suffix={cell.suffix} data-group={cell.group ? 'true' : undefined}>{cell.initial}</div>
                   <div className="label">{cell.label}</div>
                 </div>
               ))}
             </div>
 
-            <div className="timeline" data-reveal="true">
+            <div className="exp-roles" data-reveal="true">
               {ROLES.map((role) => (
-                <div className="role" key={role.title + role.dates}>
-                  <div className="role-title-block">
-                    <div className="role-title">{role.title}</div>
-                    <div className="role-org">{role.org}</div>
+                <div className="exp-role-card" key={role.title + role.dates}>
+                  <div className="exp-role-card-inner">
+                    <div className="exp-role-header">
+                      <div>
+                        <div className="exp-role-title">{role.title}</div>
+                        <div className="exp-role-org">{role.org}</div>
+                      </div>
+                      <span className="exp-role-dates">{role.dates}</span>
+                    </div>
+                    <p className="exp-role-notes">{role.notes}</p>
                   </div>
-                  <div className="role-dates">{role.dates}</div>
-                  <p className="role-notes">{role.notes}</p>
                 </div>
               ))}
             </div>
 
-            <div className="skills-line" data-reveal="true">
+            <div className="exp-skills" data-reveal="true">
               <p className="flabel">Skills &amp; tools</p>
               <div className="skills-tags">
                 {SKILLS.map((skill) => (

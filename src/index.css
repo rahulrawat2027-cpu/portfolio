@@ -521,110 +521,116 @@ details[open] .proj-toggle{ background:var(--accent-soft); border-color:var(--ac
 .proj-artefacts a:hover{ color:var(--ink); border-color:var(--ink); }
 
 /* ---------- EXPERIENCE ---------- */
-.impact-strip{
+.exp-impact{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:16px;
-  padding-bottom:64px;
-  margin-bottom:64px;
-  border-bottom:1px solid rgba(250,246,237,0.18);
+  grid-template-columns:repeat(2,1fr);
+  gap:1px;
+  background:rgba(250,246,237,0.12);
+  border:1px solid rgba(250,246,237,0.12);
+  border-radius:8px;
+  overflow:hidden;
   max-width:720px;
-  margin-left:auto;
-  margin-right:auto;
+  margin:0 auto 56px auto;
 }
-@media (max-width:900px){
-  .impact-strip{ grid-template-columns:repeat(2,1fr); row-gap:36px; }
-}
-.impact-cell{
+.exp-impact-cell{
+  background:var(--ink);
+  padding:28px 20px;
   text-align:center;
+  transition:background 0.2s ease;
 }
-.impact-cell .num{
+.exp-impact-cell:hover{
+  background:rgba(48,44,37,1);
+}
+.exp-impact-cell:nth-child(5){
+  grid-column:span 2;
+}
+.exp-impact-cell .num{
   font-family:var(--serif);
-  font-size:clamp(24px,3vw,32px);
+  font-size:clamp(26px,3.2vw,34px);
   font-weight:600;
   color:var(--gold);
 }
-.impact-cell .label{
+.exp-impact-cell .label{
   margin-top:6px;
   font-size:13px;
-  color:rgba(250,246,237,0.65);
-  max-width:18ch;
+  color:rgba(250,246,237,0.6);
+  max-width:20ch;
   margin-left:auto;
   margin-right:auto;
 }
 
-.timeline{
-  position:relative;
-  padding:0;
+.exp-roles{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
   max-width:720px;
   margin:0 auto;
 }
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:50%; transform:translateX(-1px);
-  top:0; bottom:0;
-  width:1px;
-  background:rgba(250,246,237,0.2);
+.exp-role-card{
+  background:rgba(250,246,237,0.05);
+  border:1px solid rgba(250,246,237,0.1);
+  border-left:3px solid var(--gold);
+  border-radius:6px;
+  overflow:hidden;
+  transition:border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
-.role{
-  position:relative;
-  padding:32px 0 36px 0;
-  text-align:center;
+.exp-role-card:hover{
+  border-left-color:var(--paper);
+  background:rgba(250,246,237,0.08);
+  transform:translateY(-2px);
 }
-.role:last-child{ padding-bottom:0; }
-.role::before{
-  content:"";
-  position:absolute;
-  left:50%; top:-6px;
-  transform:translateX(-50%);
-  width:12px; height:12px;
-  border-radius:50%;
-  background:var(--gold);
-  border:2px solid var(--ink);
-  z-index:1;
+.exp-role-card-inner{
+  padding:28px 32px;
 }
-.role-head{
+.exp-role-header{
   display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:4px;
-  padding:0 32px;
-  position:relative;
-  z-index:2;
-  width:100%;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
 }
-.role-title-block{
-  text-align:center;
+.exp-role-title{
+  font-family:var(--serif);
+  font-size:18px;
+  font-weight:600;
+  color:var(--paper);
+  line-height:1.2;
 }
-.role-title{ font-family:var(--serif); font-size:18px; font-weight:600; }
-.role-org{ color:rgba(250,246,237,0.75); font-size:14px; margin-top:2px; }
-.role-dates{
-  font-size:13px;
-  color:rgba(250,246,237,0.55);
+.exp-role-org{
   margin-top:4px;
-  white-space:nowrap;
+  font-size:14px;
+  color:rgba(250,246,237,0.65);
 }
-.role-notes{
-  margin-top:12px;
-  color:rgba(250,246,237,0.75);
-  font-size:14.5px;
-  max-width:56ch;
-  text-align:center;
-  line-height:1.55;
-  padding:0 24px;
+.exp-role-dates{
+  font-size:13px;
+  color:rgba(250,246,237,0.5);
+  background:rgba(250,246,237,0.08);
+  padding:4px 12px;
+  border-radius:20px;
+  white-space:nowrap;
+  flex-shrink:0;
+  border:1px solid rgba(250,246,237,0.1);
+}
+.exp-role-notes{
+  margin-top:14px;
+  color:rgba(250,246,237,0.7);
+  font-size:15px;
+  line-height:1.6;
+}
+@media (max-width:600px){
+  .exp-role-header{ flex-direction:column; gap:8px; }
+  .exp-role-card-inner{ padding:22px 20px; }
 }
 
-.skills-line{
+.exp-skills{
   margin-top:48px;
   padding-top:28px;
-  border-top:1px solid rgba(250,246,237,0.18);
+  border-top:1px solid rgba(250,246,237,0.15);
   text-align:center;
   max-width:720px;
   margin-left:auto;
   margin-right:auto;
 }
-.skills-line .flabel{
+.exp-skills .flabel{
   font-size:12.5px;
   font-weight:600;
   color:var(--gold);
