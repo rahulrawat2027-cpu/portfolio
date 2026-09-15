@@ -572,7 +572,6 @@ details[open] .proj-toggle{ background:var(--accent-soft); border-color:var(--ac
   padding:32px 0 36px 0;
   text-align:center;
 }
-.role:first-child{ padding-top:0; }
 .role:last-child{ padding-bottom:0; }
 .role::before{
   content:"";
@@ -585,7 +584,6 @@ details[open] .proj-toggle{ background:var(--accent-soft); border-color:var(--ac
   border:2px solid var(--ink);
   z-index:1;
 }
-.role:first-child::before{ top:-4px; }
 .role-head{
   display:flex;
   flex-direction:column;
